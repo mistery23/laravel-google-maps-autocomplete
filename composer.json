@@ -10,7 +10,7 @@
         "maps"
     ],
     "type": "library",
-    "version": "0.1",
+    "version": "0.1.1",
     "authors": [
         {
             "name": "mistery23",
@@ -24,7 +24,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.2",
-        "arrilot/laravel-widgets": "^3.13"
+        "illuminate/support": "^5.4|^6.0"
     },
     "autoload": {
         "psr-4": {
