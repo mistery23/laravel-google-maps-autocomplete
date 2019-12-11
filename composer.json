@@ -26,6 +26,13 @@
         "php": "^7.2",
         "illuminate/support": "^5.4|^6.0"
     },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mistery23\\GoogleMapsAutocomplete\\AutocompleteServiceProvider"
+      ]
+    }
+  },
     "autoload": {
         "psr-4": {
             "Mistery23\\GoogleMapsAutocomplete\\": "src/"

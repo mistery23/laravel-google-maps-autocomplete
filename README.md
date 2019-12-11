@@ -7,7 +7,7 @@ composer require mistery23/laravel-google-maps-autocomplete
 
 publish provider
 ```
-hp artisan vendor:publish --provider="Mistery23\GoogleMapsAutocomplete\AutocompleteServiceProvider"
+php artisan vendor:publish --provider="Mistery23\GoogleMapsAutocomplete\AutocompleteServiceProvider"
 ```
 
 ##using

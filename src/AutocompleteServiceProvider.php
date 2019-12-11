@@ -28,8 +28,8 @@ class AutocompleteServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config' => config_path(),
-            ], 'google-autocomplete-config');
+                __DIR__.'/../config/google-autocomplete.php' => config_path('google-autocomplete.php'),
+            ]);
         }
 
 
