@@ -1,5 +1,5 @@
 {
-    "name": "mistery23/laravel-google-maps-autocomplite",
+    "name": "mistery23/laravel-google-maps-autocomplete",
     "license": "MIT",
     "homepage": "https://github.com/mistery23/laravel-google-maps-autocomplite",
     "description": "laravel library for google maps autocomplite",
@@ -10,7 +10,7 @@
         "maps"
     ],
     "type": "library",
-    "version": "0.1.1",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "mistery23",
