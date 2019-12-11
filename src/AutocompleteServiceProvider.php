@@ -20,7 +20,7 @@ class AutocompleteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'autocomplete-input');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'google-autocomplete');
 
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/autocomplete-input'),

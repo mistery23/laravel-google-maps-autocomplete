@@ -13,7 +13,7 @@ class AutocompleteWidget
 {
     public static function renderInput(string $inputId, string $inputName, string $inputLabel, string $types)
     {
-        return view('autocomplete-input', [
+        return view('google-autocomplete::autocomplete-input', [
             'id' => $inputId,
             'name' => $inputName,
             'types' => $types,
