@@ -1,17 +1,16 @@
 {
-    "name": "mistery23/eloquent-object-relations",
+    "name": "mistery23/laravel-google-maps-autocomplite",
     "license": "MIT",
-    "homepage": "https://github.com/mistery23/eloquent-object-relations",
-    "description": "laravel object relations",
+    "homepage": "https://github.com/mistery23/laravel-google-maps-autocomplite",
+    "description": "laravel library for google maps autocomplite",
     "keywords":
     [
-        "eloquent",
-        "model",
         "laravel",
-        "relations"
+        "google",
+        "maps"
     ],
     "type": "library",
-    "version": "1.0.5",
+    "version": "0.1",
     "authors": [
         {
             "name": "mistery23",
@@ -29,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mistery23\\EloquentObjectRelations\\": "src/"
+            "Mistery23\\GoogleMapsAutocomplete\\": "src/"
         }
     }
 }
