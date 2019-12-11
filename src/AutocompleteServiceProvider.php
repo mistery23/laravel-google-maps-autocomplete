@@ -24,14 +24,13 @@ class AutocompleteServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/autocomplete-input'),
-        ]);
+        ], 'google-autocomplete-view');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/google-autocomplete.php' => config_path('google-autocomplete.php'),
-            ]);
+            ], 'google-autocomplete-conf');
         }
-
 
         Blade::directive('autocomplete_input', function ($expression) {
             list($inputId, $inputName, $inputLabel, $types) = explode(', ', $expression);
