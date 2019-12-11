@@ -1,0 +1,35 @@
+{
+    "name": "mistery23/eloquent-object-relations",
+    "license": "MIT",
+    "homepage": "https://github.com/mistery23/eloquent-object-relations",
+    "description": "laravel object relations",
+    "keywords":
+    [
+        "eloquent",
+        "model",
+        "laravel",
+        "relations"
+    ],
+    "type": "library",
+    "version": "1.0.5",
+    "authors": [
+        {
+            "name": "mistery23",
+            "email": "mis_tery@ukr.net"
+        },
+        {
+            "name": "Sviatoslav Bereznitskyi",
+            "email": "bugatis15@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2",
+        "arrilot/laravel-widgets": "^3.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mistery23\\EloquentObjectRelations\\": "src/"
+        }
+    }
+}
