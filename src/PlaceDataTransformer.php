@@ -8,7 +8,9 @@
 
 namespace Mistery23\GoogleMapsAutocomplete;
 
+use Mistery23\GoogleMapsAutocomplete\DTO\MatchedSubstring;
 use Mistery23\GoogleMapsAutocomplete\DTO\Place;
+use Mistery23\GoogleMapsAutocomplete\DTO\Tesrm;
 
 /**
  * Class PlaceDataTransformer
@@ -28,17 +30,28 @@ class PlaceDataTransformer
         $result = [];
 
         foreach ($data->predictions as $prediction){
-            $place = new Place();
+            $terms = [];
 
-            $place->name = $prediction->structured_formatting->main_text;
-            $place->id = $prediction->id;
-            $place->description = $prediction->description;
-            $place->matchedSubstrings = $prediction->matched_substrings;
-            $place->placeId = $prediction->place_id;
-            $place->secondaryText = $prediction->structured_formatting->secondary_text;
-            $place->terms = $prediction->terms;
+            foreach ($prediction->terms as $term){
+                $terms[] = new Tesrm($term->offset, $term->value);
+            }
 
-            $result[] = $place;
+            $matchedSubstrings = [];
+
+            foreach ($prediction->matched_substrings as $matched_substring){
+                $matchedSubstrings[] = new MatchedSubstring($matched_substring->length, $matched_substring->offset);
+            }
+
+            $result[] = new Place(
+                $prediction->id,
+                $prediction->description,
+                $prediction->place_id,
+                $prediction->structured_formatting->main_text,
+                $prediction->structured_formatting->secondary_text,
+                $terms,
+                $matchedSubstrings
+            );
+
             unset($place);
         }
 

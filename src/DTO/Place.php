@@ -13,6 +13,7 @@ namespace Mistery23\GoogleMapsAutocomplete\DTO;
  */
 class Place
 {
+
     /**
      * @var string
      */
@@ -47,4 +48,34 @@ class Place
      * @var array
      */
     public $matchedSubstrings;
+
+
+    /**
+     * Place constructor.
+     *
+     * @param string $id
+     * @param string $description
+     * @param string $placeId
+     * @param string $name
+     * @param string $secondaryText
+     * @param array  $terms
+     * @param array  $matchedSubstrings
+     */
+    public function __construct(
+        string $id,
+        string $description,
+        string $placeId,
+        string $name,
+        string $secondaryText,
+        array  $terms,
+        array  $matchedSubstrings
+    ) {
+        $this->id                = $id;
+        $this->description       = $description;
+        $this->placeId           = $placeId;
+        $this->name              = $name;
+        $this->secondaryText     = $secondaryText;
+        $this->terms             = $terms;
+        $this->matchedSubstrings = $matchedSubstrings;
+    }
 }

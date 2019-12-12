@@ -8,7 +8,7 @@
 
 namespace Mistery23\GoogleMapsAutocomplete;
 
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use http\Exception\RuntimeException;
 
 /**
  * Class AutocompletePlace
@@ -39,7 +39,7 @@ class AutocompletePlace
         $responseData = json_decode($response->getBody());
 
         if(isset($responseData->error_message)){
-            throw new BadRequestHttpException(json_decode($response->getBody())->error_message);
+            throw new RuntimeException(json_decode($response->getBody())->error_message);
         }
 
         $transformer = new PlaceDataTransformer();
