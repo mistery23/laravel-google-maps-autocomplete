@@ -8,6 +8,8 @@
 
 namespace Mistery23\GoogleMapsAutocomplete;
 
+use Mistery23\GoogleMapsAutocomplete\DTO\Place;
+
 /**
  * Class AutocompletePlace
  */
@@ -40,8 +42,33 @@ class AutocompletePlace
             throw new \RuntimeException(json_decode($response->getBody())->error_message);
         }
 
-        $transformer = new PlaceDataTransformer();
+        return $this->transform($responseData);
+    }
 
-        return $transformer->transform($responseData);
+    /**
+     * @param $data
+     * @return array|bool
+     */
+    public function transform($data)
+    {
+        if ($data->status === AutocompletePlace::ZERO_RESULTS) {
+            return false;
+        }
+
+        foreach ($data->predictions as $prediction){
+            $result[] = new Place(
+                $prediction->id,
+                $prediction->description,
+                $prediction->place_id,
+                $prediction->structured_formatting->main_text,
+                $prediction->structured_formatting->secondary_text,
+                $prediction->terms,
+                $prediction->matched_substrings
+            );
+
+            unset($place);
+        }
+
+        return $result;
     }
 }

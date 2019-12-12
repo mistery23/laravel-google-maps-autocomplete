@@ -75,7 +75,13 @@ class Place
         $this->placeId           = $placeId;
         $this->name              = $name;
         $this->secondaryText     = $secondaryText;
-        $this->terms             = $terms;
-        $this->matchedSubstrings = $matchedSubstrings;
+
+        foreach ($terms as $term){
+            $this->terms[] = new Term($term->offset, $term->value);
+        }
+
+        foreach ($matchedSubstrings as $matched_substring){
+            $this->matchedSubstrings[] = new MatchedSubstring($matched_substring->length, $matched_substring->offset);
+        }
     }
 }

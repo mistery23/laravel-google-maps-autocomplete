@@ -11,7 +11,7 @@ namespace Mistery23\GoogleMapsAutocomplete\DTO;
 /**
  * Class Tesrms
  */
-class Tesrm
+class Term
 {
 
     /**
