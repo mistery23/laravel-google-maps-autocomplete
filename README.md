@@ -30,7 +30,8 @@ $params = [
     'sessiontoken' => 'xxxxxxxxx',
     'language'     => 'en',
 ];
-$autocomplete = new AutocompletePlace($place, $params);
+$autocomplete = new AutocompletePlace();
+$autocomplete->autocomplete($place, $params);
 
 ```
 $place - is needle place,
