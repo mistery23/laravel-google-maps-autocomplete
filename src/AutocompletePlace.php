@@ -49,7 +49,7 @@ class AutocompletePlace
      * @param $data
      * @return array|bool
      */
-    public function transform($data)
+    private function transform($data)
     {
         if ($data->status === AutocompletePlace::ZERO_RESULTS) {
             return false;
