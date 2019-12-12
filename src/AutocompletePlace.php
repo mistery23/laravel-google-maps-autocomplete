@@ -12,7 +12,6 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 /**
  * Class AutocompletePlace
- * @package Mistery23\GoogleMapsAutocomplete
  */
 class AutocompletePlace
 {

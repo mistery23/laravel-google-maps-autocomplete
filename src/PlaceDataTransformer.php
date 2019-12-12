@@ -8,9 +8,10 @@
 
 namespace Mistery23\GoogleMapsAutocomplete;
 
+use Mistery23\GoogleMapsAutocomplete\DTO\Place;
+
 /**
  * Class PlaceDataTransformer
- * @package Mistery23\GoogleMapsAutocomplete
  */
 class PlaceDataTransformer
 {
@@ -32,8 +33,8 @@ class PlaceDataTransformer
             $place->name = $prediction->structured_formatting->main_text;
             $place->id = $prediction->id;
             $place->description = $prediction->description;
-            $place->matched_substrings = $prediction->matched_substrings;
-            $place->place_id = $prediction->place_id;
+            $place->matchedSubstrings = $prediction->matched_substrings;
+            $place->placeId = $prediction->place_id;
             $place->secondaryText = $prediction->structured_formatting->secondary_text;
             $place->terms = $prediction->terms;
 

@@ -10,6 +10,9 @@ namespace Mistery23\GoogleMapsAutocomplete;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class AutocompleteServiceProvider
+ */
 class AutocompleteServiceProvider extends ServiceProvider
 {
     /**

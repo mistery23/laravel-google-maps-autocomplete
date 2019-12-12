@@ -6,11 +6,10 @@
  * @author  Sviatoslav Breznitskyi <bugatis15@gmail.com>
  */
 
-namespace Mistery23\GoogleMapsAutocomplete;
+namespace Mistery23\GoogleMapsAutocomplete\DTO;
 
 /**
  * Class Place
- * @package Mistery23\GoogleMapsAutocomplete
  */
 class Place
 {
@@ -27,7 +26,7 @@ class Place
     /**
      * @var string
      */
-    public $place_id;
+    public $placeId;
 
     /**
      * @var string
@@ -47,5 +46,5 @@ class Place
     /**
      * @var array
      */
-    public $matched_substrings;
+    public $matchedSubstrings;
 }
