@@ -38,7 +38,7 @@ class AutocompletePlace
 
         $responseData = json_decode($response->getBody());
 
-        if(isset($responseData->error_message)){
+        if (isset($responseData->error_message)) {
             throw new \RuntimeException(json_decode($response->getBody())->error_message);
         }
 
@@ -55,7 +55,7 @@ class AutocompletePlace
             return false;
         }
 
-        foreach ($data->predictions as $prediction){
+        foreach ($data->predictions as $prediction) {
             $result[] = new Place(
                 $prediction->id,
                 $prediction->description,

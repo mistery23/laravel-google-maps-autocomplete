@@ -76,11 +76,11 @@ class Place
         $this->name              = $name;
         $this->secondaryText     = $secondaryText;
 
-        foreach ($terms as $term){
+        foreach ($terms as $term) {
             $this->terms[] = new Term($term->offset, $term->value);
         }
 
-        foreach ($matchedSubstrings as $matched_substring){
+        foreach ($matchedSubstrings as $matched_substring) {
             $this->matchedSubstrings[] = new MatchedSubstring($matched_substring->length, $matched_substring->offset);
         }
     }
