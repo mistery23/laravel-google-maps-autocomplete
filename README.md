@@ -21,17 +21,18 @@ GOOGLE_AUTOCOMPLETE_API_KEY=############################
 
 ##using
 
-include in your page layout to script section:
 ```
-@autocomplete_scripts() 
-```
+use Mistery23\GoogleMapsAutocomplete\AutocompletePlace;
 
-use for including autocomplete input field:
-```
-@autocomplete_input('id', 'name', 'label', 'types') 
-```
+...
+$place = 'new';
+$params = [
+    'sessiontoken' => 'xxxxxxxxx',
+    'language'     => 'en',
+];
+$autocomplete = new AutocompletePlace($place, $params);
 
-where
-'id', 'name', 'label' - is html attributes of input
+```
+$place - is needle place,
 
-'types' - is option for search type in google API 
+$params - is optional parameters, see https://developers.google.com/places/web-service/autocomplete for more optional parameters
